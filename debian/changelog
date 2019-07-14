@@ -1,5 +1,10 @@
-kopano-webapp-plugin-intranet (1.0.0-0) UNRELEASED; urgency=medium
+kopano-webapp-plugin-intranet (1.0.0-0~1.gbp506757) UNRELEASED; urgency=medium
+
+  ** SNAPSHOT build @5067578da5659cbfba58871614970a8be3c8efa8 **
 
   * Initial release. (Closes: #931988)
+  * [7cf608e] Debian packaging for k-w-plugin-intranet
+  * [68fcf9f] Add .travis.yml from <http://travis.debian.net>
+  * [5067578] Add /.travis.yml to extend-diff-ignore in debian/source/options
 
- -- Roel van Meer <roel@1afa.com>  Sun, 14 Jul 2019 13:53:00 +0200
+ -- Roel van Meer <roel@1afa.com>  Sun, 14 Jul 2019 14:19:55 +0200
