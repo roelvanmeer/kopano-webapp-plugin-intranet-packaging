@@ -1,0 +1,27 @@
+Source: kopano-webapp-plugin-intranet
+Section: web
+Priority: optional
+Maintainer: Giraffe Maintainers <pkg-giraffe-maintainers@lists.alioth.debian.org>
+Uploaders: Carsten Schoenert <c.schoenert@t-online.de>,
+ Roel van Meer <roel@1afa.com>
+Build-Depends: 
+ closure-compiler,
+ debhelper (>= 10),
+ dh-exec,
+ gettext,
+ php-cli,
+Vcs-Git: https://salsa.debian.org/giraffe-team/kopano-webapp-plugin-intranet.git
+Vcs-Browser: https://salsa.debian.org/giraffe-team/kopano-webapp-plugin-intranet
+Standards-Version: 4.4.0
+
+Package: kopano-webapp-intranet
+Architecture: all
+Depends:
+ kopano-webapp-common (>= 3.3.1-1~),
+ ${misc:Depends},
+Description: Kopano WebApp intranet plugin
+ This package is a plugin for kopano-webapp, a web interface for the Kopano
+ Collaboration Platform.
+ .
+ This plugin adds one or more buttons in the top menu bar which can be used
+ to open a webpage inside Kopano WebApp.

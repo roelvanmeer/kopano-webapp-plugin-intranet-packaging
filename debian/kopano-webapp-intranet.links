@@ -1,0 +1,2 @@
+# source                                            # target
+/etc/kopano/webapp/config-intranet.php  usr/share/kopano-webapp/plugins/intranet/config.php

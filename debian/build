@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# This script was made by reverse engineering of the Ant build.xml file.
+
+set -e
+
+if [ ! -d debian ]; then
+	echo "$0 must run from the package top level dir." >&2
+	exit 1
+fi
+
+rm -rf build
+
+# Build js files.
+mkdir -p build/js
+cat \
+	js/IntranetPlugin.js \
+	js/ui/ContentPanel.js \
+	js/ui/Panel.js \
+	> build/js/intranet-debug.js
+( cd build/js && closure-compiler \
+	--js intranet-debug.js \
+	--create_source_map intranet.js.map \
+	--source_map_format=V3 \
+	--js_output_file intranet.js )
+# Build language files.
+mkdir -p build/language
+for po in $(find language/ -name '*.po') ; do
+	dir=$(dirname $po)
+	mkdir -p build/$dir
+	msgfmt -v -o build/${po%.po}.mo $po
+done

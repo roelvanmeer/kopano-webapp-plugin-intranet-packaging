@@ -1,0 +1,9 @@
+#!/usr/bin/dh-exec
+# source                                    # target
+config.php                  => etc/kopano/webapp/config-intranet.php
+
+build/js                       usr/share/kopano-webapp/plugins/intranet
+build/language                 usr/share/kopano-webapp/plugins/intranet
+php                            usr/share/kopano-webapp/plugins/intranet
+resources                      usr/share/kopano-webapp/plugins/intranet
+manifest.xml                   usr/share/kopano-webapp/plugins/intranet
